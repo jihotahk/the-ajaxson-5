@@ -23,6 +23,7 @@ function fetchAndDisplayGif(event) {
             api_key: "dc6zaTOxFJmzC",
             tag : "jackson 5 "+searchQuery
         };
+
         // make an ajax request for a random GIF
         $.ajax({
             url: "https://api.giphy.com/v1/gifs/random",
