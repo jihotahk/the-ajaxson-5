@@ -3,26 +3,68 @@
 <head>
     <title>The AJAXson 5</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script type="text/javascript" src="request-gif.js"></script>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .jumbotron{
+            margin-top: 20px;
+        }
+        .form-group{
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .thumbnail{
+            border:none;
+            margin-top: 20px;
+        }
+        img{
+            width: 75%;
+        }
+    </style>
 
 </head>
 <body>
-    <h1>The AJAXson 5</h1>
+
+<div class='container'>
+    <div class="jumbotron">
+        <h1>The AJAXson 5</h1>
+    </div>
+
 
     <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?</label>
-        <input name="tag" type="text"/>
-        <div class="riddle">
-            <p>Prove you are not a robot by answering this riddle:</p>
-            <input type="text" name="riddle" />
-            <label>Jacksons are better than 1.</label>
+        <div class="form-group">
+            <label>What kind of Jackson 5 related gif do you want?</label>
+            <input name="tag" type="text" class="form-control"/>
+        </div>
+        <div class="riddle form-group">
+            <label>Prove you are not a robot by answering this riddle:</label>
+            <div class="row">
+                <div class="col-xs-4 col-sm-6">
+                    <input type="text" name="riddle" class="form-control"/>
+                </div>
+                <div class="col-xs-8 col-sm-6">
+                    <p>Jacksons are better than 1.</p>
+                </div>
+
+            </div>
             <p id="riddle-feedback"></p>
         </div>
-        <input style="display:block" type="submit" value="Get my Gif!" />
-    </form>
+        <input class="btn btn-primary btn-lg" style="display:block" type="submit" value="Get my Gif!" />
 
-    <img id="gif" src="" hidden="true"/>
-    <p id="feedback"></p>
+    </form>
+    <div class='row'>
+        <div class='thumbnail'>
+            <img id="gif" src="" hidden="true"/>
+        </div>
+        <p id="feedback"></p>
+    </div>
+
+
+</div>
 
 </body>
 </html>
